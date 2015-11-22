@@ -1,2 +1,4 @@
 # DORDB
-Project to subject DORDB - Database records the consumption of water, gas and electricity
+Project to subject DORDB
+
+Single tennis cup
