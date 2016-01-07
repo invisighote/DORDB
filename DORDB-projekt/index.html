@@ -129,13 +129,14 @@ background-color: red;
 					<div class="tab-pane" id="u3">
 						<h4>3. Slovní návrh API rozhraní „business logiky“ pro dva procesy</h4>
 						<ol>
-                        <p class="doplnit">Doplnit</p>
-							<li><strong>Přidání vypůjčení</strong><br />Vstupními parametry procesu jsou osobní číslo řidiče, spz vozidla a datum, ke kterému výpujčka je platná.
-							V rámci procesu je nutné ověřit platnost zadaných údajů a provést nalezení odpovídajících záznamů. Následně jsou zkontrolovány existující výpujčky a v případě 
-							kolize s jinou výpujčkou je vrácena zpráva. Po úspěšném založení výpujčky je možné vložit jízdy.</li>
-							<li><strong>Přidání jízdy</strong><br />Vstupními parametry procesu jsou osobní číslo řidiče, spz vozidla, názvy startu a cíle jízdy včetně 
-							vzdálenosti a datum, ke kterému jízda je platná. Je nutné zkontrolovat platnost údajů a vyhledat odpovídající záznamy. Také jenutné ověřit zda k danému 
-							datu, řidiči a vozidlu existuje otevřenná výpujčka;jinak není možné jízdu založit a je vrácena zpráva.</li>
+                        <li class="doplnit">Doplnit ještě jednu procku</li>
+							<li><h3>Naplánování zápasu</h3>
+                            <p><strong>Název:</strong> vytvor_zapas</p>
+                            <p><strong>Parametry:</strong> ID_hrac_domaci, ID_hrac_hoste, datum</p>
+                            <p><strong>Popis:</strong> Procedura najde volný stadion.
+                            Vyvoří záznam v tabulce <em>Zapas</em> s nalezeným vhodným stadionem.
+                            Na závěr vytvoří záznamy v tabulce <em>Ucastnik_zapasu</em> pro příslušný zápas.</p>
+        </li>
 						</ol>
 					</div>
 <!-- 4 ================================================== -->

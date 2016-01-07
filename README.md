@@ -5,8 +5,8 @@ Single tennis cup
 
 1. úloha - HOTOVO
 2. úloha - HOTOVO
-2. úloha
-4. úloha - hOTOVO
+3. úloha - na půl, ještě jedna procka 
+4. úloha - HOTOVO
 5. úloha
 6. úloha
 7. úloha
