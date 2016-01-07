@@ -1,51 +1,82 @@
-<!DOCTYPE HTML>
+
+<!DOCTYPE html>
 <html lang="cs">
-	<head>
-        <meta charset="utf-8" />
-		<title>Single tennis cup - semestrální projekt do předmětu DORDB </title>
- 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description" content="Semestrální projekt do předmětu DORDB na FIM-UHK">
-        <meta name="author" content="David Kováč, Vladimír Nývlt">
+<head>
+<meta charset="utf-8">
+<title>Semestrální projek &middot; DORDB</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
 
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	</head>
-	<body>
+<!-- Le styles -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+body {
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
 
-		<!-- Content -->
-			<div id="content">
-				<div class="inner">
+/* Custom container */
+.container-narrow {
+	margin: 0 auto;
+	max-width: 700px;
+}
 
-						<article class="box post">
-							<header>
-                                <h1>Single tennis cup</h1>
-								<p>Semestrální projekt do předmětu DORDB</p>
-							</header>
+.container-narrow>hr {
+	margin: 30px 0;
+}
 
-                           	<div class="info">
+/* Main marketing message and sign up button */
+.jumbotron {
+	margin: 60px 0;
+	text-align: center;
+}
 
-								<span class="task"><span>Úkol</span> <span class="num">1</span></span>
+.jumbotron h1 {
+	font-size: 72px;
+	line-height: 1;
+}
 
-							</div>
+.jumbotron .btn {
+	font-size: 21px;
+	padding: 14px 24px;
+}
 
-						</article>
+/* Supporting marketing content */
+.marketing {
+	margin: 60px 0;
+}
 
-				</div>
-			</div>
+.marketing p+h4 {
+	margin-top: 28px;
+}
+.doplnit {
+background-color: red;
+}
+</style>
+<link href="assets/css/bootstrap-responsive.min.css" rel="stylesheet">
+</head>
 
-		<!-- Sidebar -->
-			<div id="rowrow-fluid marketing">
+<body>
 
-				<!-- Logo -->
-					<h1 id="menu">Úkoly</h1>
+	<div class="container-narrow">
 
-				<!-- Nav -->
-            <div class= "tabbable tabs-left">
-					<div id="nav nav-tabs">
-                        <ul class="nav nav-tabs">
+		<div class="masthead">
+			<h3 class="muted">Single tennis cup</h3>
+            <p>Semestrální projekt do předmětu DORDB</p>
+		</div>
+
+		<hr>
+
+		<div class="jumbotron">
+			<p class="lead">Autoři: Kováč David, Nývlt Vladimír</p>
+		</div>
+
+		<hr>
+
+		<div class="row-fluid marketing">
+			<div class="tabbable tabs-left">
+				<ul class="nav nav-tabs">
 					<li><a href="#u1" data-toggle="tab">Úloha 1</a></li>
 					<li><a href="#u2" data-toggle="tab">Úloha 2</a></li>
 					<li><a href="#u3" data-toggle="tab">Úloha 3</a></li>
@@ -62,31 +93,21 @@
 					<li><a href="#u14" data-toggle="tab">Úloha 14</a></li>
 					<li><a href="#u15" data-toggle="tab">Úloha 15</a></li>
 				</ul>
-    				<div class="tab-content">
+				<div class="tab-content">
 <!-- 1 ================================================== -->
 					<div class="tab-pane" id="u1">
-                                                  <details>
-
-                            <h2>Obrázek s modelem (E-R diagram)</h2>
-
-                                     <p>
-                                     Musí obsahovat minimálně 4 entity, lze použít model z vlastních předchozích
-                                     semestrálních prací apod. Doporučena jsou originální zadání (nikoliv různé knihovny,
-                                     databáze CD/DVD, autobazary, apod.)
-                                     </p>
-							</details>
-
-                            <details>
-                            <h3> Řešení </h3>
-                            <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-                            </details>
+						<h4>1. Obrázek s modelem (E-R diagram)</h4>
+						<p>
+							<a href="images/e-rDiagramV.png"><img alt=""
+								src="images/e-rDiagram.png" height="500" width="500"></a>
+						</p>
 					</div>
 <!-- 2 ================================================== -->
 					<div class="tab-pane" id="u2">
 						<h4>2. Slovní popis dodatečných integritních omezení</h4>
 						<ol>
-							<li>Datum vypůjčení automobilu musí být nižší než datum vrácení automobilu.</li>
-							<li>Datum vkládané jizdy nesmí být větší meněí než je datum výpůjčky.</li>
+							<li class="doplnit">Doplnit</li>
+							<li class="doplnit">Doplnit</li>
 						</ol>
 					</div>
 
@@ -94,11 +115,12 @@
 					<div class="tab-pane" id="u3">
 						<h4>3. Slovní návrh API rozhraní „business logiky“ pro dva procesy</h4>
 						<ol>
+                        <p class="doplnit">Doplnit</p>
 							<li><strong>Přidání vypůjčení</strong><br />Vstupními parametry procesu jsou osobní číslo řidiče, spz vozidla a datum, ke kterému výpujčka je platná.
-							V rámci procesu je nutné ověřit platnost zadaných údajů a provést nalezení odpovídajících záznamů. Následně jsou zkontrolovány existující výpujčky a v případě
+							V rámci procesu je nutné ověřit platnost zadaných údajů a provést nalezení odpovídajících záznamů. Následně jsou zkontrolovány existující výpujčky a v případě 
 							kolize s jinou výpujčkou je vrácena zpráva. Po úspěšném založení výpujčky je možné vložit jízdy.</li>
-							<li><strong>Přidání jízdy</strong><br />Vstupními parametry procesu jsou osobní číslo řidiče, spz vozidla, názvy startu a cíle jízdy včetně
-							vzdálenosti a datum, ke kterému jízda je platná. Je nutné zkontrolovat platnost údajů a vyhledat odpovídající záznamy. Také jenutné ověřit zda k danému
+							<li><strong>Přidání jízdy</strong><br />Vstupními parametry procesu jsou osobní číslo řidiče, spz vozidla, názvy startu a cíle jízdy včetně 
+							vzdálenosti a datum, ke kterému jízda je platná. Je nutné zkontrolovat platnost údajů a vyhledat odpovídající záznamy. Také jenutné ověřit zda k danému 
 							datu, řidiči a vozidlu existuje otevřenná výpujčka;jinak není možné jízdu založit a je vrácena zpráva.</li>
 						</ol>
 					</div>
@@ -106,6 +128,7 @@
 					<div class="tab-pane" id="u4">
 						<h4>4. Pět slovně formulovaných dotazů nad schématem</h4>
 						<ol>
+                     <p class="doplnit">Doplnit</p>
 							<li>Vypiše všechny řidiče, kteří najezdili více jak 35000km</li>
 							<li>Vypíše automobil a model (podle ujetých kilometru) a jejich model.</li>
 							<li>Vypíše všechny řidiče, kteří za poslední rok udělali víc jak 20 jízd</li>
@@ -118,6 +141,7 @@
 						<h4>5. Skript, který vytvoří databázové schéma odpovídající
 							E-R diagramu z bodu 1</h4>
 						<ul>
+                            <p class="doplnit">Doplnit</p>
 							<li><a href="scripts/project-shema.sql">project-shema.sql</a></li>
 						</ul>
 					</div>
@@ -126,6 +150,7 @@
 						<h4>6. Skript, který vytvoří v databázovém schématu dodatečná
 							integritní omezení z bodu 2</h4>
 						<ul>
+                            <p class="doplnit">Doplnit</p>
 							<li><a href="scripts/integr_omezeni.sql">integr_omezeni.sql</a></li>
 						</ul>
 					</div>
@@ -133,6 +158,7 @@
 					<div class="tab-pane" id="u7">
 						<h4>7. Skript, který naplní tabulky testovacími daty</h4>
 						<ol>
+                            <p class="doplnit">Doplnit</p>
 							<li><a href="scripts/data_pobocky.sql">Data Pobočky</a></li>
 							<li><a href="scripts/data_ridici.sql">Data Řidiči</a></li>
 							<li><a href="scripts/data_model.sql">Data Model</a></li>
@@ -145,6 +171,7 @@
 					<div class="tab-pane" id="u8">
 						<h4>8. Skript (včetně výstupu spool), který provede postupně všechny navržené dotazy z bodu 4</h4>
 						<ol>
+                            <p class="doplnit">Doplnit</p>
 							<li><a href="scripts/dotazy.sql">Dotazy</a></li>
 							<li><a href="scripts/dotazy-spool.txt">Dotazy spool</a></li>
 						</ol>
@@ -154,6 +181,7 @@
 						<h4>9. Skript, který se pokusí porušit postupně všechna dodatečná integritní omezení + výstup spool z provádění tohoto
 							skriptu (budou vidět chyby při porušení I.O.)</h4>
 						<ol>
+                            <p class="doplnit">Doplnit</p>
 							<li><a href="scripts/integr_omezeni1-spool.txt">integr_omezeni1-spool.txt</a></li>
 							<li><a href="scripts/integr_omezeni2-spool.txt">integr_omezeni2-spool.txt</a></li>
 						</ol>
@@ -162,6 +190,7 @@
 					<div class="tab-pane" id="u10">
 						<h4>10. Skript pro vytvoření balíku (package) a procedur „business logiky“ z bodu 3</h4>
 						<ul>
+                     <p class="doplnit">Doplnit</p>
 							<li><a href="scripts/project-sp.sql">Vytvoření business logiky</a></li>
 						</ul>
 					</div>
@@ -170,6 +199,7 @@
 						<h4>11. Testovací skript (včetně výstupu spool obdrženého po spuštění) pro obě procedury, včetně souvisejících dotazů, které
 							ověří, že každá procedura provedla to co měla</h4>
 						<ul>
+                     <p class="doplnit">Doplnit</p>
 							<li><a href="scripts/sp-spool.sql">Dotazy a výstup spool nad business logikou</a></li>
 						</ul>
 					</div>
@@ -180,6 +210,7 @@
 							zaměstnance v rámci oddělní apod.) – tyto hodnoty budou
 							automaticky aktualizovány pomocí triggerů</h4>
 						<ul>
+                     <p class="doplnit">Doplnit</p>
 							<li><a href="scripts/12_distance_counter.sql">Dopnění sloupce o "prum_vzdalenost" - průměrná vzdálenost jizd ridiče</a></li>
 						</ul>
 					</div>
@@ -188,6 +219,7 @@
 						<h4>13. Skript, který vytvoří úložiště ještě jednou v
 							„objektové“ podobě</h4>
 						<ul>
+                     <p class="doplnit">Doplnit</p>
 							<li><a href="scripts/object-model.sql">Vytvoří model v objektové podobě</a></li>
 							<li><a href="scripts/object-model-data.sql">Naplní OBJ model DATY</a></li>
 						</ul>
@@ -198,9 +230,10 @@
 							tentokrát nad objektovými tabulkami (operace Join bude nahrazena
 							využitím objektových referencí a dereferencí atd.)</h4>
 						<ul>
+                     <p class="doplnit">Doplnit</p>
 							<li><a href="scripts/dotazy-objektove.sql">Objektové dotazy</a></li>
 							<li><a href="scripts/dotazy-obj-spool.txt">Spool</a></li>
-
+						
 						</ul>
 					</div>
 <!-- 15 ================================================== -->
@@ -210,9 +243,10 @@
 							již v provozní databázi nejsou k dispozici).</h4>
 						<p>
 							Datový sklad by byl složen z dimezní DATUM, POBOCKA, RIDIC, VOZIDLO, MODEL a VYPUJCENI a tabulka faktů by byla JIZDY.
-							Využití datového skladu je možné pro analýzu ujetých kilometrů a to jak z podledu řidičů, poboček nebo jednotlivých
+							Využití datového skladu je možné pro analýzu ujetých kilometrů a to jak z podledu řidičů, poboček nebo jednotlivých 
 							vozidel. Dále je možné analýzu agregovat podle datumu jako jsou dny, týdny, měsíce nebo roky.
 						</p>
+                     <p class="doplnit">Doplnit</p>
 						<p>
 							<strong>Fakta</strong>
 							<ul>
@@ -294,16 +328,16 @@
 		</div>
 		<hr>
 
+		<div class="footer">
+			<p>&copy; FIM UHK 2015, Autoři: Kováč David, Nývlt Vladimírr</p>
+		</div>
 
+	</div>
+	<!-- /container -->
 
-				<!-- Copyright -->
-					<ul id="copyright">
-						<li>&copy; 2015</li>
-                        <li>Bc. Kováč David </li><li> &amp;</li><li> Bc. Nývlt Vladimír</li>
-					</ul>
-
-			</div>
-
+	<!-- Le javascript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
 	<script src="assets/js/jquery-2.0.2.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 

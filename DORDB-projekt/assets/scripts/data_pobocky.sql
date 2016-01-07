@@ -1,0 +1,10 @@
+INSERT INTO pobocka (mesto, adresa, stat) VALUES ('Elroy','034 Javier Shoal','Palau');
+INSERT INTO pobocka (mesto, adresa, stat) VALUES ('Eunice','85806 Alberto Pike','Cook Islands');
+INSERT INTO pobocka (mesto, adresa, stat) VALUES ('Antonette','1280 Yost Run','Jersey');
+INSERT INTO pobocka (mesto, adresa, stat) VALUES ('Ewald','14868 Blanda Fields','South Korea');
+INSERT INTO pobocka (mesto, adresa, stat) VALUES ('Adrian','765 Ashleigh Highway','Rwanda');
+INSERT INTO pobocka (mesto, adresa, stat) VALUES ('Crystal','13883 Flavio Wells','Nepal');
+INSERT INTO pobocka (mesto, adresa, stat) VALUES ('Stuart','026 Schoen Trail','Samoa');
+INSERT INTO pobocka (mesto, adresa, stat) VALUES ('Roel','09652 Mraz Plaza','Christmas Island');
+INSERT INTO pobocka (mesto, adresa, stat) VALUES ('Anika','4036 Hirthe Manor','Niue');
+INSERT INTO pobocka (mesto, adresa, stat) VALUES ('Gussie','499 Hudson Glen','Italy');

@@ -1,0 +1,65 @@
+> select * from vypujceni where vypujcka_id = 1001
+VYPUJCKA_ID DATUM_VYPUJCENI DATUM_VRACENI   RIDIC_ID VOZIDLO_ID VZDALENOST_CELKEM
+----------- --------------- ------------- ---------- ---------- -----------------
+       1001 28.05.13                              15         19               335 
+
+Plan hash value: 3976175557
+ 
+--------------------------------------------------------------------------------------------
+| Id  | Operation                   | Name         | Rows  | Bytes | Cost (%CPU)| Time     |
+--------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT            |              |     1 |    30 |     2   (0)| 00:00:01 |
+|   1 |  TABLE ACCESS BY INDEX ROWID| VYPUJCENI    |     1 |    30 |     2   (0)| 00:00:01 |
+|*  2 |   INDEX UNIQUE SCAN         | PK_VYPUJCENI |     1 |       |     1   (0)| 00:00:01 |
+--------------------------------------------------------------------------------------------
+ 
+Predicate Information (identified by operation id):
+---------------------------------------------------
+ 
+   2 - access("VYPUJCKA_ID"=1001)
+
+   Statistics
+-----------------------------------------------------------
+               6  user calls
+               0  physical read total multi block requests
+               0  physical read total bytes
+               0  cell physical IO interconnect bytes
+               0  commit cleanout failures: block lost
+               0  IMU commits
+               0  IMU Flushes
+               0  IMU contention
+               0  IMU bind flushes
+               0  IMU mbu flush
+> insert into jizdy ("START", cil, datum, vzdalenost, vypujceni_id) values ('PHA', 'OL', '1.1.2013', 230, 1001)
+
+Error starting at line 2 in command:
+insert into jizdy ("START", cil, datum, vzdalenost, vypujceni_id) values ('PHA', 'OL', '1.1.2013', 230, 1001)
+Error report:
+SQL Error: ORA-20000: Neproslo pres integritni omezeni, ze datum nesmy byt mensi!
+ORA-06512: at "PP.CKECK_JIZDY_DATUM", line 11
+ORA-04088: error during execution of trigger 'PP.CKECK_JIZDY_DATUM'
+20000. 00000 -  "%s"
+*Cause:    The stored procedure 'raise_application_error'
+           was called which causes this error to be generated.
+*Action:   Correct the problem as described in the error message or contact
+           the application administrator or DBA for more information.
+ 
+----------------------------------------------------------------------------------
+| Id  | Operation                | Name  | Rows  | Bytes | Cost (%CPU)| Time     |
+----------------------------------------------------------------------------------
+|   0 | INSERT STATEMENT         |       |     1 |    40 |     1   (0)| 00:00:01 |
+|   1 |  LOAD TABLE CONVENTIONAL | JIZDY |       |       |            |          |
+----------------------------------------------------------------------------------
+
+   Statistics
+-----------------------------------------------------------
+               7  user calls
+               0  physical read total multi block requests
+               0  physical read total bytes
+               0  cell physical IO interconnect bytes
+               0  commit cleanout failures: block lost
+               0  IMU commits
+               0  IMU Flushes
+               0  IMU contention
+               0  IMU bind flushes
+               0  IMU mbu flush

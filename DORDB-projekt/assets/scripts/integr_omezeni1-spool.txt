@@ -1,0 +1,69 @@
+> select * from vypujceni where vypujcka_id = 1001
+VYPUJCKA_ID DATUM_VYPUJCENI DATUM_VRACENI   RIDIC_ID VOZIDLO_ID VZDALENOST_CELKEM
+----------- --------------- ------------- ---------- ---------- -----------------
+       1001 28.05.13                              15         19               335 
+
+Plan hash value: 3976175557
+ 
+--------------------------------------------------------------------------------------------
+| Id  | Operation                   | Name         | Rows  | Bytes | Cost (%CPU)| Time     |
+--------------------------------------------------------------------------------------------
+|   0 | SELECT STATEMENT            |              |     1 |    30 |     2   (0)| 00:00:01 |
+|   1 |  TABLE ACCESS BY INDEX ROWID| VYPUJCENI    |     1 |    30 |     2   (0)| 00:00:01 |
+|*  2 |   INDEX UNIQUE SCAN         | PK_VYPUJCENI |     1 |       |     1   (0)| 00:00:01 |
+--------------------------------------------------------------------------------------------
+ 
+Predicate Information (identified by operation id):
+---------------------------------------------------
+ 
+   2 - access("VYPUJCKA_ID"=1001)
+
+   Statistics
+-----------------------------------------------------------
+               6  user calls
+               0  physical read total multi block requests
+           24576  physical read total bytes
+           24576  cell physical IO interconnect bytes
+               0  commit cleanout failures: block lost
+               0  IMU commits
+               0  IMU Flushes
+               0  IMU contention
+               0  IMU bind flushes
+               0  IMU mbu flush
+> update vypujceni set datum_vraceni = '1.1.2013' where vypujcka_id = 1001
+
+Error starting at line 2 in command:
+update vypujceni set datum_vraceni = '1.1.2013' where vypujcka_id = 1001
+Error report:
+SQL Error: ORA-02290: check constraint (PP.CK_VYPUJCENI_DATUMY) violated
+02290. 00000 -  "check constraint (%s.%s) violated"
+*Cause:    The values being inserted do not satisfy the named check
+           
+*Action:   do not insert values that violate the constraint.
+Plan hash value: 1697206332
+ 
+-----------------------------------------------------------------------------------
+| Id  | Operation          | Name         | Rows  | Bytes | Cost (%CPU)| Time     |
+-----------------------------------------------------------------------------------
+|   0 | UPDATE STATEMENT   |              |     1 |    20 |     2   (0)| 00:00:01 |
+|   1 |  UPDATE            | VYPUJCENI    |       |       |            |          |
+|*  2 |   INDEX UNIQUE SCAN| PK_VYPUJCENI |     1 |    20 |     1   (0)| 00:00:01 |
+-----------------------------------------------------------------------------------
+ 
+Predicate Information (identified by operation id):
+---------------------------------------------------
+ 
+   2 - access("VYPUJCKA_ID"=1001)
+
+   Statistics
+-----------------------------------------------------------
+               7  user calls
+               0  physical read total multi block requests
+               0  physical read total bytes
+               0  cell physical IO interconnect bytes
+               0  commit cleanout failures: block lost
+               0  IMU commits
+               0  IMU Flushes
+               0  IMU contention
+               0  IMU bind flushes
+               0  IMU mbu flush
