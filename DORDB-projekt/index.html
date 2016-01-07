@@ -105,9 +105,23 @@ background-color: red;
 <!-- 2 ================================================== -->
 					<div class="tab-pane" id="u2">
 						<h4>2. Slovní popis dodatečných integritních omezení</h4>
-						<ol>
-							<li class="doplnit">Doplnit</li>
-							<li class="doplnit">Doplnit</li>
+                        <h5>2.1 Triviální integritní omezení</h5>
+                        <ol>
+							<li>Tabulka Stadion</li>
+                               <ul>
+                                   <li>Atribut <em>kapacita</em> nesmí být záporné číslo</li>
+                               </ul>
+
+						</ol>
+
+                        <h5>2.2 Netriviální integritní omezení</h5>
+                        <ol>
+                            <li>Tabulka Ucastnik_zapasu</li>
+                               <ul>
+                                   <li>Jeden zápas hrají právě dva ruzní hráči</li>
+                               </ul>
+                            <li>Tabulka Esa</li>
+                                <ul>Eso nemůže dát hráč, který se zápasu nezúčastnil</ul>
 						</ol>
 					</div>
 
