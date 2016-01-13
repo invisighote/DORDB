@@ -129,7 +129,15 @@ background-color: red;
 					<div class="tab-pane" id="u3">
 						<h4>3. Slovní návrh API rozhraní „business logiky“ pro dva procesy</h4>
 						<ol>
-                        <li class="doplnit">Doplnit ještě jednu procku</li>
+                       
+  							<li><h3>Aktualizace statistik hráče</h3>
+                            <p><strong>Název:</strong> stat_update</p>
+                            <p><strong>Parametry:</strong> ID_hrac, ID_zapas, pocet_esa, pocet_gemy</p>
+                            <p><strong>Popis:</strong> Procedura po odehraném zápase zaktualizuje statistiky hráčů.
+                            Vyvoří záznam v tabulce <em>Esa</em> s počtem odehraných es konkrétního hráče v daném zápase.
+                            Vytvoří záznam v tabulce <em>Pocet_vyhranych_gemu</em> s počtem odehraných gemů konkrétního hráče v daném zápase.</p>
+        </li>
+                        
 							<li><h3>Naplánování zápasu</h3>
                             <p><strong>Název:</strong> vytvor_zapas</p>
                             <p><strong>Parametry:</strong> ID_hrac_domaci, ID_hrac_hoste, datum</p>
@@ -155,8 +163,8 @@ background-color: red;
 						<h4>5. Skript, který vytvoří databázové schéma odpovídající
 							E-R diagramu z bodu 1</h4>
 						<ul>
-                            <p class="doplnit">Doplnit</p>
-							<li><a href="scripts/project-shema.sql">project-shema.sql</a></li>
+                          
+							<li><a href="scripts_tennis/uloha5.txt">uloha5</a></li>
 						</ul>
 					</div>
 <!-- 6 ================================================== -->
