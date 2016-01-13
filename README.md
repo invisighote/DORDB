@@ -8,7 +8,7 @@ Single tennis cup
 3. úloha - HOTOVO (potřeba zkontrolovat)
 4. úloha - HOTOVO
 5. úloha - HOTOVO (potřeba zkontrolovat)
-6. úloha
+6. úloha - HOTOVO (netuším uplně, zda je to správně, je to opsané z jiné úlohy)
 7. úloha
 8. úloha
 9. úloha

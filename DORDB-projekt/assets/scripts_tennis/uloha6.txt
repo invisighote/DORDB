@@ -1,0 +1,51 @@
+-- Trivialni integritni omezeni
+ 
+-- Tabulka Stadion, atribut kapacita nesmí být záporné èíslo
+ALTER TABLE Stadion ADD CONSTRAINT kladne_kapacita CHECK (kapacita >= 0);
+
+
+
+-- Netrivialni integritni omezeni
+
+-- Tabulka Ucastnik_zapasu, jeden zápas hrají právì dva rùzní hráèi
+CREATE OR REPLACE PROCEDURE kontrola_poctu_hracu (idzapas IN NUMBER) AS
+pocet_hracu NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO pocet_hracu FROM Ucastnik_zapasu WHERE ID_zapas = idzapas;
+  
+  -- vyhozeni vyjimky
+  IF(pocet_hracu > 1) THEN
+    RAISE_APPLICATION_ERROR(-20001, 'Pokus o vložení tøetího hráèe do jednoho zápasu');
+  END IF;
+END;
+/
+
+CREATE OR REPLACE TRIGGER trig_kontrola_poctu_hracu
+BEFORE insert or update 
+ON Ucastnik_zapasu
+FOR EACH ROW
+BEGIN
+  kontrola_poctu_hracu(:NEW.ID_zapas);
+END;
+/
+
+-- Tabulka Esa, Eso nemùže dát hráè, který se zápasu neúèastnil
+CREATE OR REPLACE PROCEDURE kontrola_eso_ucast (idhrac IN NUMBER, idzapas IN NUMBER) AS
+promenna VARCHAR(255);
+BEGIN
+  BEGIN
+    SELECT jmeno INTO promenna FROM Hrac WHERE ID_tym IN (SELECT ID_hrac FROM Ucastnici_zapasu WHERE ID_zapas = idzapas) AND ID_hrac = idhrac;
+    EXCEPTION WHEN NO_DATA_FOUND THEN
+      RAISE_APPLICATION_ERROR(-20005, 'Hráèùv se zápasu neúèastnil, nemohl proto dát eso');
+  END;
+END;
+/
+
+CREATE OR REPLACE TRIGGER trig_kontrola_eso_ucast
+BEFORE insert or update 
+ON Eso
+FOR EACH ROW
+BEGIN
+  kontrola_eso_ucast(:NEW.ID_hrac, :NEW.ID_zapas);
+END;
+/
