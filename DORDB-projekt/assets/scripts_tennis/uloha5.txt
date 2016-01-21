@@ -1,67 +1,61 @@
 CREATE TABLE Hrac
 (
-	ID_hrac    NUMBER(38) NOT NULL,
-	jmeno      NVARCHAR(50) NOT NULL,
-	prijmeni   NVARCHAR(50) NOT NULL,
-	HrajeRukou NCHAR(1) NOT NULL
+	ID_hrac NUMBER(38, 0) NOT NULL
+	,jmeno      NVARCHAR2(50) NOT NULL
+	,prijmeni   NVARCHAR2(50) NOT NULL
+	,HrajeRukou NCHAR(1) NOT NULL
 )
 ;
 
 CREATE TABLE Ucastnik_zapasu
 (
-	ID_ucast   NUMBER(38) NOT NULL,
-	ID_hrac    NUMBER(38) NOT NULL,
-	ID_zapas   NUMBER(38) NOT NULL,
+	ID_ucast NUMBER(38, 0) NOT NULL
+	,ID_hrac NUMBER(38, 0) NOT NULL
+	,ID_zapas NUMBER(38, 0) NOT NULL
 )
 ;
 
 CREATE TABLE Esa
 (
-  ID_esa     NUMBER(38) NOT NULL,
-  ID_hrac    NUMBER(38) NOT NULL,
-  ID_zapas   NUMBER(38) NOT NULL,
+  ID_esa NUMBER(38, 0) NOT NULL
+  ,ID_hrac NUMBER(38, 0) NOT NULL
+  ,ID_zapas NUMBER(38, 0) NOT NULL
 )
 ;
 
 CREATE TABLE Pocet_vyhranych_gemu
 (
-	ID_gem     NUMBER(38) NOT NULL,
-	ID_hrac    NUMBER(38) NOT NULL,
-	ID_zapas   NUMBER(38) NOT NULL,
+	ID_gem NUMBER(38, 0) NOT NULL
+	,ID_hrac NUMBER(38, 0) NOT NULL
+	,ID_zapas NUMBER(38, 0) NOT NULL
 )
 ;
 
 CREATE TABLE Zapas
 (
-	ID_zapas   NUMBER(38) NOT NULL,
-	datum      DATE NOT NULL,
-	ID_stadion NUMBER(38) NOT NULL,
+	ID_zapas   NUMBER(38, 0) NOT NULL
+	,datum DATE NOT NULL
+	,ID_stadion NUMBER(38, 0) NOT NULL
 )
 ;
 
 CREATE TABLE Stadion
 (
-	ID_stadion NUMBER(38) NOT NULL,
-	kapacita   NUMBER(5) NOT NULL,
-	mesto      NVARCHAR(50) NOT NULL,
+	ID_stadion NUMBER(38, 0) NOT NULL
+	,kapacita NUMBER(5) NOT NULL
+	,mesto NVARCHAR2(50) NOT NULL
 )
 ;
 
 -- PK
 
-ALTER TABLE Hrac ADD CONSTRAINT PK_Hrac
-	PRIMARY KEY (ID_hrac)
-;
 
-ALTER TABLE Ucastnik_zapasu ADD CONSTRAINT PK_Ucastnik_zapasu 
-	PRIMARY KEY (ID_ucast)
-;
 
 ALTER TABLE Esa ADD CONSTRAINT PK_Esa
 	PRIMARY KEY (ID_esa)
 ;
 
-ALTER TABLE Pocet_vyhranych_gemu ADD CONSTRAINT PK_pocet_vyhranych_gemu 
+ALTER TABLE Pocet_vyhranych_gemu ADD CONSTRAINT PK_pocet_vyhranych_gemu
 	PRIMARY KEY (ID_gem)
 ;
 
@@ -79,15 +73,15 @@ ALTER TABLE Ucastnik_zapasu ADD CONSTRAINT FK_Ucastnik_zapasu_Hrac
 	FOREIGN KEY (ID_hrac) REFERENCES Hrac (ID_hrac)
 ;
 
-ALTER TABLE Ucastnik_zapasu ADD CONSTRAINT FK_Ucastnik_zapasu_zapas 
+ALTER TABLE Ucastnik_zapasu ADD CONSTRAINT FK_Ucastnik_zapasu_zapas
 	FOREIGN KEY (ID_zapas) REFERENCES Zapas (ID_zapas)
 ;
 
-ALTER TABLE Esa ADD CONSTRAINT FK_Esa_Hrac 
+ALTER TABLE Esa ADD CONSTRAINT FK_Esa_Hrac
 	FOREIGN KEY (ID_hrac) REFERENCES Hrac (ID_hrac)
 ;
 
-ALTER TABLE Esa ADD CONSTRAINT FK_Esa_zapas 
+ALTER TABLE Esa ADD CONSTRAINT FK_Esa_zapas
 	FOREIGN KEY (ID_zapas) REFERENCES Zapas (ID_zapas)
 ;
 
@@ -95,46 +89,45 @@ ALTER TABLE Pocet_vyhranych_gemu ADD CONSTRAINT FK_pocet_vyhranych_gemu_Hrac
 	FOREIGN KEY (ID_hrac) REFERENCES Hrac (ID_hrac)
 ;
 
-ALTER TABLE Pocet_vyhranych_gemu ADD CONSTRAINT FK_pocet_vyhranych_gemu_zapas 
+ALTER TABLE Pocet_vyhranych_gemu ADD CONSTRAINT FK_pocet_vyhranych_gemu_zapas
 	FOREIGN KEY (ID_zapas) REFERENCES Zapas (ID_zapas)
 ;
 
-ALTER TABLE Zapas ADD CONSTRAINT FK_zapas_stadion 
+ALTER TABLE Zapas ADD CONSTRAINT FK_zapas_stadion
 	FOREIGN KEY (ID_stadion) REFERENCES Stadion (ID_stadion)
 ;
 
 -- Sekvence pro primarni klice tabulek
-
 CREATE SEQUENCE seq_Hrac
   START WITH 1
   INCREMENT BY 1
   NOCACHE
   NOCYCLE;
-  
+
 CREATE SEQUENCE seq_Ucastnik_zapasu
   START WITH 1
   INCREMENT BY 1
   NOCACHE
   NOCYCLE;
-  
+
 CREATE SEQUENCE seq_Esa
   START WITH 1
   INCREMENT BY 1
   NOCACHE
   NOCYCLE;
-  
+
 CREATE SEQUENCE seq_Pocet_vyhranych_gemu
   START WITH 1
   INCREMENT BY 1
   NOCACHE
   NOCYCLE;
-  
+
 CREATE SEQUENCE seq_Zapas
   START WITH 1
   INCREMENT BY 1
   NOCACHE
   NOCYCLE;
-  
+
 CREATE SEQUENCE seq_Stadion
   START WITH 1
   INCREMENT BY 1
