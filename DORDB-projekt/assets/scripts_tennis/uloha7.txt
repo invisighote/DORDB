@@ -116,9 +116,7 @@ INSERT INTO Stadion VALUES (seq_Stadion.nextval, 20000, 'Cleveland');
 INSERT INTO Stadion VALUES (seq_Stadion.nextval, 18000, 'Cincinnati');
 
 
--- Skript pro naplneni tabulek dalsich       (OKOPCENO)
-
--- tabulka Zapas, Ucastnici_zapasu
+-- tabulka Zapas, Ucastnik_zapasu
 CREATE OR REPLACE PROCEDURE vytvor_zapas (id_hrac_domaci IN NUMBER, id_hrac_hoste IN NUMBER, datum IN DATE) AS
 pocet_domaci NUMBER;
 pocet_hoste NUMBER;
@@ -133,8 +131,8 @@ BEGIN
   SELECT * INTO idstadion FROM(SELECT ID_stadion FROM Stadion WHERE kapacita > pocet_celkem AND ID_stadion NOT IN (SELECT ID_stadion FROM Zapas WHERE datum = cas) ORDER BY kapacita ASC) WHERE rownum = 1;
   
   INSERT INTO Zapas VALUES (seq_Zapas.nextval, datum, idstadion);
-  INSERT INTO Ucastnici_zapasu VALUES (seq_Ucastnici_zapasu.nextval, id_hrac_domaci, seq_Zapas.currval);
-  INSERT INTO Ucastnici_zapasu VALUES (seq_Ucastnici_zapasu.nextval, id_hrac_hoste, seq_Zapas.currval);
+  INSERT INTO Ucastnik_zapasu VALUES (seq_Ucastnik_zapasu.nextval, id_hrac_domaci, seq_Zapas.currval);
+  INSERT INTO Ucastnik_zapasu VALUES (seq_Ucastnik_zapasu.nextval, id_hrac_hoste, seq_Zapas.currval);
 END;
 /
 
