@@ -1,0 +1,151 @@
+-- Tabulka Hrac
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Nick','Kyrgios','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Dominic','Thiem','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Jack','Sock','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Bernard','Tomic','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Gregor','Dimitrov','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Hugues','Herbert','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Vaclav','Pospisil','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'David','Goffin','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Milos','Raonic','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Martin','Klizan','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Kei','Nishikori','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Benoit','Paire','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Roberto','Bautista','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Martin','Cilic','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Juan','Del Potro','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Alexandr','Dolgopov','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Ernests','Gulbis','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Thomaz','Bellucci','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Jeremy','Chardy','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Novak','Djokovic','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Fabio','Fognini','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Leonardo','Mayer','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Andy','Murray','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Sam','Querrey','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Kevin','Anderson','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Pablo','Cuevas','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Richard','Gasquet','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Gael','Monfils','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Rafael','Nadal','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Viktor','Troicki','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Nicolas','Almagro','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Marcos','Baghdatis','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Tomas','Berdych','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'John','Isner','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Horia','Tecau','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Wilfried','Tsonga','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Stan','Wawrinka','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Mario','Ancic','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Juan','Monaco','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Andreas','Seppi','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Gilles','Simon','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Robin','Soderling','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Janko','Tipsarevic','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Igor','Andreev','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Phillip','Kohlschreiber','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Florian','Mayer','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Gilles','Muller','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Jamie','Murray','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Fernando','Verdasco','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Guillermo','Coria','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Jose','Acasuso','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Guillermo','Coria','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'David','Ferrer','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Robby','Ginepri','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Joachim','Johansson','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Lukasz','Kubot','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Nicolas','Mahut','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'David','Nalbandian','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Tommy','Robredo','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Andy','Roddick','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Dmitry','Tursunov','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Mikhail','Youzhny','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Julien','Benneteau','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Nikolay','Davydenko','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Taylor','Dent','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Roger','Federer','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Mardy','Fish','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Victor','Hanescu','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Lieyton','Hewitt','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Feliciano','Lopez','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Jurgen','Melzer','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Jarkko','Nieminen','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Olivier','Rochus','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Filippo','Volandri','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Fernando','Gonzales','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Luis','Horna','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Michael','Llodra','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Xavier','Malisse','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Andy','Ram','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Marat','Safin','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'James','Blake','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Ivo','Karlovic','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Ivan','Ljubicic','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Nicolas','Massu','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Wesley','Moodie','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Paradorn','Srichaphan','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Gaston','Gaudio','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Sebastien','Grosjean','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Tommy','Haas','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Dominik','Hrbatý','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Mariano','Puerta','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'André','Sa','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Radek','Štìpánek','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Martin','Verkerk','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Mariano','Zabaleta','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Guillermo','Canas','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Arnaud','Clément','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Jonathan','Erlich','L');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Nicolas','Kiefer','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Stefan','Koubek','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Robert','Lindstedt','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Max','Mirnyi','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Galo','Blanco','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Magnus','Norman','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Alexander','Popp','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Sjeng','Schalken','R');
+INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Albert','Costa','L');
+
+-- tabulka Stadion
+INSERT INTO Stadion VALUES (seq_Stadion.nextval, 13000, 'Houston');
+INSERT INTO Stadion VALUES (seq_Stadion.nextval, 20000, 'Orlando');
+INSERT INTO Stadion VALUES (seq_Stadion.nextval, 25000, 'Charleston');
+INSERT INTO Stadion VALUES (seq_Stadion.nextval, 20000, 'Atlanta');
+INSERT INTO Stadion VALUES (seq_Stadion.nextval, 20000, 'Cleveland');
+INSERT INTO Stadion VALUES (seq_Stadion.nextval, 18000, 'Cincinnati');
+
+
+-- Skript pro naplneni tabulek dalsich       (OKOPCENO)
+
+-- tabulka Zapas, Ucastnici_zapasu
+CREATE OR REPLACE PROCEDURE vytvor_zapas (id_tym_domaci IN NUMBER, id_tym_hoste IN NUMBER, cas IN DATE) AS
+pocet_domaci NUMBER;
+pocet_hoste NUMBER;
+pocet_celkem NUMBER;
+idstadion NUMBER;
+BEGIN
+  SELECT divaci INTO pocet_domaci FROM Tym WHERE ID_Tym = id_tym_domaci;
+  SELECT divaci INTO pocet_hoste FROM Tym WHERE ID_Tym = id_tym_hoste;
+  
+  pocet_celkem := pocet_domaci + pocet_hoste;
+  
+  SELECT * INTO idstadion FROM(SELECT ID_stadion FROM Stadion WHERE kapacita > pocet_celkem AND ID_stadion NOT IN (SELECT ID_stadion FROM Zapas WHERE datum = cas) ORDER BY kapacita ASC) WHERE rownum = 1;
+  
+  INSERT INTO Zapas VALUES (seq_Zapas.nextval, cas, idstadion);
+  INSERT INTO Ucastnici_zapasu VALUES (seq_Ucastnici_zapasu.nextval, id_tym_domaci, seq_Zapas.currval);
+  INSERT INTO Ucastnici_zapasu VALUES (seq_Ucastnici_zapasu.nextval, id_tym_hoste, seq_Zapas.currval);
+END;
+/
+
+BEGIN
+  vytvor_zapas(14, 22, TO_DATE('2014/01/01', 'yyyy/mm/dd'));
+  vytvor_zapas(43, 16, TO_DATE('2014/01/01', 'yyyy/mm/dd'));
+  vytvor_zapas(46, 20, TO_DATE('2014/01/02', 'yyyy/mm/dd'));
+  vytvor_zapas(40, 11, TO_DATE('2014/01/02', 'yyyy/mm/dd'));
+  vytvor_zapas(14, 55, TO_DATE('2014/01/03', 'yyyy/mm/dd'));
+  vytvor_zapas(25, 49, TO_DATE('2014/01/03', 'yyyy/mm/dd'));
+  vytvor_zapas(19, 17, TO_DATE('2014/01/04', 'yyyy/mm/dd'));
+  vytvor_zapas(45, 36, TO_DATE('2014/01/04', 'yyyy/mm/dd'));
+
+
