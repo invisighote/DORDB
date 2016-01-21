@@ -119,33 +119,34 @@ INSERT INTO Stadion VALUES (seq_Stadion.nextval, 18000, 'Cincinnati');
 -- Skript pro naplneni tabulek dalsich       (OKOPCENO)
 
 -- tabulka Zapas, Ucastnici_zapasu
-CREATE OR REPLACE PROCEDURE vytvor_zapas (id_tym_domaci IN NUMBER, id_tym_hoste IN NUMBER, cas IN DATE) AS
+CREATE OR REPLACE PROCEDURE vytvor_zapas (id_hrac_domaci IN NUMBER, id_hrac_hoste IN NUMBER, datum IN DATE) AS
 pocet_domaci NUMBER;
 pocet_hoste NUMBER;
 pocet_celkem NUMBER;
 idstadion NUMBER;
 BEGIN
-  SELECT divaci INTO pocet_domaci FROM Tym WHERE ID_Tym = id_tym_domaci;
-  SELECT divaci INTO pocet_hoste FROM Tym WHERE ID_Tym = id_tym_hoste;
+  SELECT divaci INTO pocet_domaci FROM Tym WHERE ID_Tym = id_hrac_domaci;
+  SELECT divaci INTO pocet_hoste FROM Tym WHERE ID_Tym = id_hrac_hoste;
   
   pocet_celkem := pocet_domaci + pocet_hoste;
   
   SELECT * INTO idstadion FROM(SELECT ID_stadion FROM Stadion WHERE kapacita > pocet_celkem AND ID_stadion NOT IN (SELECT ID_stadion FROM Zapas WHERE datum = cas) ORDER BY kapacita ASC) WHERE rownum = 1;
   
-  INSERT INTO Zapas VALUES (seq_Zapas.nextval, cas, idstadion);
-  INSERT INTO Ucastnici_zapasu VALUES (seq_Ucastnici_zapasu.nextval, id_tym_domaci, seq_Zapas.currval);
-  INSERT INTO Ucastnici_zapasu VALUES (seq_Ucastnici_zapasu.nextval, id_tym_hoste, seq_Zapas.currval);
+  INSERT INTO Zapas VALUES (seq_Zapas.nextval, datum, idstadion);
+  INSERT INTO Ucastnici_zapasu VALUES (seq_Ucastnici_zapasu.nextval, id_hrac_domaci, seq_Zapas.currval);
+  INSERT INTO Ucastnici_zapasu VALUES (seq_Ucastnici_zapasu.nextval, id_hrac_hoste, seq_Zapas.currval);
 END;
 /
 
 BEGIN
-  vytvor_zapas(14, 22, TO_DATE('2014/01/01', 'yyyy/mm/dd'));
-  vytvor_zapas(43, 16, TO_DATE('2014/01/01', 'yyyy/mm/dd'));
-  vytvor_zapas(46, 20, TO_DATE('2014/01/02', 'yyyy/mm/dd'));
-  vytvor_zapas(40, 11, TO_DATE('2014/01/02', 'yyyy/mm/dd'));
-  vytvor_zapas(14, 55, TO_DATE('2014/01/03', 'yyyy/mm/dd'));
-  vytvor_zapas(25, 49, TO_DATE('2014/01/03', 'yyyy/mm/dd'));
-  vytvor_zapas(19, 17, TO_DATE('2014/01/04', 'yyyy/mm/dd'));
-  vytvor_zapas(45, 36, TO_DATE('2014/01/04', 'yyyy/mm/dd'));
+  vytvor_zapas(14, 22, TO_DATE('2016/01/01', 'yyyy/mm/dd'));
+  vytvor_zapas(43, 16, TO_DATE('2016/01/01', 'yyyy/mm/dd'));
+  vytvor_zapas(46, 20, TO_DATE('2016/01/02', 'yyyy/mm/dd'));
+  vytvor_zapas(40, 11, TO_DATE('2016/01/02', 'yyyy/mm/dd'));
+  vytvor_zapas(14, 55, TO_DATE('2016/01/03', 'yyyy/mm/dd'));
+  vytvor_zapas(25, 49, TO_DATE('2016/01/03', 'yyyy/mm/dd'));
+  vytvor_zapas(19, 17, TO_DATE('2016/01/04', 'yyyy/mm/dd'));
+  vytvor_zapas(45, 36, TO_DATE('2016/01/04', 'yyyy/mm/dd'));
 
-
+end;
+                                            
