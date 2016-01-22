@@ -1,4 +1,4 @@
--- Tabulka Hrac
+  -- Tabulka Hrac
 INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Nick','Kyrgios','R');
 INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Dominic','Thiem','R');
 INSERT INTO Hrac (ID_hrac,jmeno,prijmeni,HrajeRukou) VALUES (seq_Hrac.nextval,'Jack','Sock','R');
@@ -116,35 +116,55 @@ INSERT INTO Stadion VALUES (seq_Stadion.nextval, 20000, 'Cleveland');
 INSERT INTO Stadion VALUES (seq_Stadion.nextval, 18000, 'Cincinnati');
 
 
--- tabulka Zapas, Ucastnik_zapasu
-CREATE OR REPLACE PROCEDURE vytvor_zapas (id_hrac_domaci IN NUMBER, id_hrac_hoste IN NUMBER, datum IN DATE) AS
-pocet_domaci NUMBER;
-pocet_hoste NUMBER;
-pocet_celkem NUMBER;
+CREATE OR REPLACE PROCEDURE vytvor_zapas (id_tym_domaci IN NUMBER, id_tym_hoste IN NUMBER, cas IN DATE) AS
+domaci NUMBER;
+hoste NUMBER;
 idstadion NUMBER;
 BEGIN
-  SELECT divaci INTO pocet_domaci FROM Tym WHERE ID_Tym = id_hrac_domaci;
-  SELECT divaci INTO pocet_hoste FROM Tym WHERE ID_Tym = id_hrac_hoste;
-  
-  pocet_celkem := pocet_domaci + pocet_hoste;
-  
-  SELECT * INTO idstadion FROM(SELECT ID_stadion FROM Stadion WHERE kapacita > pocet_celkem AND ID_stadion NOT IN (SELECT ID_stadion FROM Zapas WHERE datum = cas) ORDER BY kapacita ASC) WHERE rownum = 1;
-  
-  INSERT INTO Zapas VALUES (seq_Zapas.nextval, datum, idstadion);
-  INSERT INTO Ucastnik_zapasu VALUES (seq_Ucastnik_zapasu.nextval, id_hrac_domaci, seq_Zapas.currval);
-  INSERT INTO Ucastnik_zapasu VALUES (seq_Ucastnik_zapasu.nextval, id_hrac_hoste, seq_Zapas.currval);
+
+  SELECT * INTO idstadion FROM(SELECT ID_stadion FROM Stadion ORDER BY kapacita ASC) WHERE rownum = 1;
+
+  INSERT INTO Zapas VALUES (seq_Zapas.nextval, cas, idstadion);
+  INSERT INTO UCASTNIK_ZAPASU VALUES (seq_UCASTNIK_ZAPASU.nextval, id_tym_domaci, seq_Zapas.currval);
+  INSERT INTO UCASTNIK_ZAPASU VALUES (seq_UCASTNIK_ZAPASU.nextval, id_tym_hoste, seq_Zapas.currval);
 END;
 /
 
 BEGIN
-  vytvor_zapas(14, 22, TO_DATE('2016/01/01', 'yyyy/mm/dd'));
-  vytvor_zapas(43, 16, TO_DATE('2016/01/01', 'yyyy/mm/dd'));
-  vytvor_zapas(46, 20, TO_DATE('2016/01/02', 'yyyy/mm/dd'));
-  vytvor_zapas(40, 11, TO_DATE('2016/01/02', 'yyyy/mm/dd'));
-  vytvor_zapas(14, 55, TO_DATE('2016/01/03', 'yyyy/mm/dd'));
-  vytvor_zapas(25, 49, TO_DATE('2016/01/03', 'yyyy/mm/dd'));
-  vytvor_zapas(19, 17, TO_DATE('2016/01/04', 'yyyy/mm/dd'));
-  vytvor_zapas(45, 36, TO_DATE('2016/01/04', 'yyyy/mm/dd'));
+  vytvor_zapas(14, 22, TO_DATE('2014/01/01', 'yyyy/mm/dd'));
+  vytvor_zapas(43, 16, TO_DATE('2014/01/01', 'yyyy/mm/dd'));
+  vytvor_zapas(46, 20, TO_DATE('2014/01/02', 'yyyy/mm/dd'));
+  vytvor_zapas(40, 11, TO_DATE('2014/01/02', 'yyyy/mm/dd'));
+  vytvor_zapas(14, 55, TO_DATE('2014/01/03', 'yyyy/mm/dd'));
+  vytvor_zapas(25, 49, TO_DATE('2014/01/03', 'yyyy/mm/dd'));
+  vytvor_zapas(19, 17, TO_DATE('2014/01/04', 'yyyy/mm/dd'));
+END;
 
-end;
+create or replace PROCEDURE kontrola_eso_ucast (idhrac IN NUMBER, idzapas IN NUMBER) AS
+promenna VARCHAR(255);
+BEGIN
+  BEGIN
+    SELECT jmeno INTO promenna FROM Hrac WHERE ID_hrac IN (SELECT ID_hrac FROM UCASTNIK_ZAPASU WHERE ID_zapas = idzapas) AND ID_hrac = idhrac;
+    EXCEPTION WHEN NO_DATA_FOUND THEN
+      RAISE_APPLICATION_ERROR(-20005, 'Hráèùv se zápasu neúèastnil, nemohl proto dát eso');
+  END;
+END;
+
+
+-- esa
+INSERT INTO Esa VALUES(seq_Esa.nextval, 478, 1, 27);
+INSERT INTO Esa VALUES(seq_Esa.nextval, 785, 2, 2);
+INSERT INTO Esa VALUES(seq_Esa.nextval, 347, 2, 15);
+INSERT INTO Esa VALUES(seq_Esa.nextval, 760, 2, 89);
+INSERT INTO Esa VALUES(seq_Esa.nextval, 2, 3, 80);
+INSERT INTO Esa VALUES(seq_Esa.nextval, 2, 3, 90);
+INSERT INTO Esa VALUES(seq_Esa.nextval, 395, 3, 3);
+INSERT INTO Esa VALUES(seq_Esa.nextval, 591, 3, 74);
+INSERT INTO Esa VALUES(seq_Esa.nextval, 615, 4, 71);
+INSERT INTO Esa VALUES(seq_Esa.nextval, 922, 4, 74);
+INSERT INTO Esa VALUES(seq_Esa.nextval, 25, 4, 21);
+
+
+
+
                                             
